@@ -1,6 +1,9 @@
 --Crear Base de Datos
 CREATE DATABASE ExamenABD
 
+USE [ExamenABD]
+GO
+
 CREATE TABLE PROVEEDORES (
   PROV_ID int PRIMARY KEY,
   PROV_NOM varchar(50),
