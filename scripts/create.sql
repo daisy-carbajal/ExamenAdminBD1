@@ -16,7 +16,7 @@ CREATE TABLE PRODUCTOS (
 	PRODPROV_PRECIO bit,
 	PRODPRECIO_TOTAL float,
 	PRODCANT int,
-    PROD_ESTADO bit
+        PROD_ESTADO bit
     -- el estado indica si el producto se sigue vendiendo
 	-- cantidad se actualiza con cada venta, despues de completar un pendiente, o registrar producto para la casa
     -- el calculo del precio se realizaria desde el frontend antes de mandar los datos a la base de datos
@@ -26,7 +26,7 @@ CREATE TABLE PENDIENTES (
 	PEND_ID int PRIMARY KEY,
 	PENDPROV_ID int FOREIGN KEY REFERENCES PROVEEDORES(PROV_ID),
 	PENDFECHA_ENTREGA date,
-    PEND_ESTADO bit,
+        PEND_ESTADO bit,
 	PENDTOTAL float
     -- pend estado para confirmar si el pendiente se completo o no
     -- al actualizar el estado del pendiente se actualiza la tabla productos desde el frontend
@@ -49,7 +49,7 @@ CREATE TABLE HORARIO (
 CREATE TABLE EMPLEADOS (
 	EMP_ID int PRIMARY KEY,
 	EMP_NOM varchar(50),
-    EMP_APELLIDO varchar(50),
+        EMP_APELLIDO varchar(50),
 	EMP_NACIMIENTO date,
 	EMP_ESTADO bit,
 	EMP_TURNO int FOREIGN KEY REFERENCES HORARIO(TURNO_ID) 
